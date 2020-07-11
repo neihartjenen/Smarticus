@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import Question from "./pages/question"
+import Question from "./components/Question"
 import ScoreBoard from "./pages/scoreboard"
-import './App.css';
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 

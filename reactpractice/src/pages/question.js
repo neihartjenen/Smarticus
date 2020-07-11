@@ -1,18 +1,17 @@
 import React, { Component } from "react";
+import Question from "../components/Question"
 
 class Question extends Component{
-  state={
-      Quesiton: "",
-      Answer: "",
-      PossibleAnswers: []
-  };
+    state={
+        topTen: []
+    };
 
 render() {
-  return(
-      <div>
-          Hello
-      </div>
-  )
+    return(
+        <div className="container">
+            
+        </div>
+    )
 }
 
 }
