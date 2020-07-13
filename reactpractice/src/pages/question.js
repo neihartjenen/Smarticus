@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import Question from "../components/Question"
+import {Col, Row, Container} from "../components/Grid"
+import Format from "../components/Question"
 
 class Question extends Component{
     state={
-        topTen: []
+        
     };
 
 render() {
     return(
-        <div className="container">
-            
-        </div>
+        <Container>
+            <Format/>
+        </Container>
     )
 }
 
