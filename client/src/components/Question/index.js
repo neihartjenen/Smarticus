@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Header from "../header";
 import {Container, Col, Row} from "../Grid";
-import Footer from "../footer";
+import Button from "../buttons";
+
 
 class Question extends Component{
   state={
@@ -37,13 +37,7 @@ render() {
         <Row>
           <Col size={"12"}>
             {this.state.PossibleAnswers.map((answer,i) => 
-              <p key={i}>
-                <label>
-                  <input name="group1" type="radio" checked />
-                  <span>{answer}</span>
-                </label>
-              </p>
-            
+              <Button answer={answer} key={i}/>
             )
             }
           </Col>

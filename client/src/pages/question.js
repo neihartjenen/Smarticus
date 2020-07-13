@@ -4,7 +4,7 @@ import Format from "../components/Question"
 
 class Question extends Component{
     state={
-        
+        questions:[]
     };
 
 render() {
