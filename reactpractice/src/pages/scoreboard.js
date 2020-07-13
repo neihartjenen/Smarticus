@@ -7,8 +7,8 @@ class Scoreboard extends Component{
 
 render() {
     return(
-        <div>
-            Hello
+        <div className="container">
+            
         </div>
     )
 }
