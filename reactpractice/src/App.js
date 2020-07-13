@@ -1,5 +1,5 @@
 import React from 'react';
-import Question from "./components/Question"
+import Question from "./pages/question"
 import ScoreBoard from "./pages/scoreboard"
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
