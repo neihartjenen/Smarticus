@@ -2,9 +2,10 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema 
 var questionSchema = new Schema ({
-    questions: {type: String},
-    answer: {type: String},
-    possibleChoice: {type: Array}
+    question: {type: String},
+    answers: {type: Array},
+    correct: {type: String},
+    hint: {type: String}
 })
 
 var Question = mongoose.model("Question", questionSchema);

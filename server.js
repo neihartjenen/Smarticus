@@ -3,6 +3,7 @@ var app = express()
 var Port = process.env.PORT || 3001;
 
 var mongoose = require("mongoose");
+var db = mongoose.connection;
 
 app.use(express.urlencoded({extended: true}))
 
@@ -20,6 +21,11 @@ var apiroutes = require("./routes/routes");
 apiroutes(app);
 
 mongoose.connect(process.env.MONGODB_URI|| "mongodb://localhost/smarti" )
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(){
+    console.log("connected")
+})
 
 app.listen(Port, function(){
     console.log("app is listening on:"+ Port)

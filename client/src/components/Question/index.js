@@ -5,7 +5,7 @@ import Footer from "../footer";
 
 class Question extends Component{
   state={
-      Quesiton: "",
+      Question: "",
       Answer: "",
       PossibleAnswers: []
   };
@@ -24,13 +24,20 @@ class Question extends Component{
   }
 
 render() {
+  console.log(this.state.Question)
   return(
-      <Container>
-        {/* <Header>{this.state.Quesiton}</Header> */}
+    <div>
+        <Row>
+            <Col size={"12"}>
+                <p>
+                    {this.state.Question}
+                </p>
+            </Col>
+        </Row>
         <Row>
           <Col size={"12"}>
-            {this.state.PossibleAnswers.map(answer => 
-              <p>
+            {this.state.PossibleAnswers.map((answer,i) => 
+              <p key={i}>
                 <label>
                   <input name="group1" type="radio" checked />
                   <span>{answer}</span>
@@ -41,8 +48,14 @@ render() {
             }
           </Col>
         </Row>
-          {/* <Footer>{this.state.Answer}</Footer> */}
-      </Container>
+        <Row>
+            <Col size={"12"}>
+                <p>
+                    {this.state.Answer}
+                </p>
+            </Col>
+        </Row>
+        </div>
   )
 }
 

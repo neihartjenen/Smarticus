@@ -1,15 +1,17 @@
 const mongoose = require('mongoose');
 const { type } = require('os');
-const Schema = mongoose.Schema;
+const Schema = mongoose.Schema,
+bcrypt = require("bcrypt"),
+SALT_WORK_FACTOR = 10;
 
 
-const User = new Schema({
-    username: {type: String},
-    password: {type: String},
-    tempScore: {type: String},
+const userSchema = new Schema({
+    username: {type: String, required: true, index: {unique: true}},
+    password: {type: String, required: true},
+    tempScore: {type: Number},
     Score: []
     
 })
 
-
-module.exports = mongoose.model('User', User);
+const User = mongoose.model('User', userSchema);
+module.exports = User

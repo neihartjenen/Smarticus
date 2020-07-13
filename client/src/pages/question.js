@@ -1,18 +1,18 @@
 import React, { Component } from "react";
+import {Col, Row, Container} from "../components/Grid"
+import Format from "../components/Question"
 
 class Question extends Component{
-  state={
-      Quesiton: "",
-      Answer: "",
-      PossibleAnswers: []
-  };
+    state={
+        
+    };
 
 render() {
-  return(
-      <div>
-          Hello
-      </div>
-  )
+    return(
+        <Container>
+            <Format/>
+        </Container>
+    )
 }
 
 }

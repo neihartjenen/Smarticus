@@ -5,7 +5,9 @@ function Header(Question){
     return( 
         <Row>
             <Col size={"12"}>
-                {Question}
+                <p>
+                    {Question}
+                </p>
             </Col>
         </Row>
     )

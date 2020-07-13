@@ -1,7 +1,8 @@
-var db = require("../models");
+const router = require("express").Router();
+const quizController = require("../controller/controller");
+// Matches with "/api/books"
+  router.route("/")
+    .get(quizController.findAll)
+    .post(quizController.create);
 
-function apiRoutes(app){
-
-}
-
-module.exports = apiRoutes
+module.exports = router;
