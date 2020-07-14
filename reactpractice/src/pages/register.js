@@ -10,40 +10,20 @@ class Register extends Component{
     
     render() {
         return (
-            <div>
-              <NavBar
-                 title="Register"
-               />
-               <form>
-               <TextField
-                 hintText="Enter your First Name"
-                 floatingLabelText="First Name"
-                 onChange = {(event,newValue) => this.setState({first_name:newValue})}
-                 />
-               <br/>
-               <TextField
-                 hintText="Enter your Last Name"
-                 floatingLabelText="Last Name"
-                 onChange = {(event,newValue) => this.setState({last_name:newValue})}
-                 />
-               <br/>
-               <TextField
-                 hintText="Enter your Email"
-                 type="email"
-                 floatingLabelText="Email"
-                 onChange = {(event,newValue) => this.setState({email:newValue})}
-                 />
-               <br/>
-               <TextField
-                 type = "password"
-                 hintText="Enter your Password"
-                 floatingLabelText="Password"
-                 onChange = {(event,newValue) => this.setState({password:newValue})}
-                 />
-               <br/>
-               </form>
-               <button label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+          <form style={styles.form} onSubmit={this.handleOnSubmit}>
+          <h4>Welcome Back!</h4>
+          <div className='form-group row'>
+            <input className='input' type='text' placeholder='New User'/>
           </div>
+          <div className='form-group row'>
+            <input className='input' type='password' placeholder='Password'/>
+          </div>
+          <div className='form-group row'>
+            <button className='btn' type='submit'>Register Now</button>
+          </div>
+          <div className='form-group row'>
+          </div>
+        </form>
         );
       }
     }

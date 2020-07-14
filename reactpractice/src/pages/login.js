@@ -9,27 +9,20 @@ class Login extends Component{
     
     render() {
         return (
-          <div>
-              <div>
-              <Navbar
-                 title="Login"
-               />
-               <TextField
-                 hintText="Enter your Username"
-                 floatingLabelText="Username"
-                 onChange = {(event,newValue) => this.setState({username:newValue})}
-                 />
-               <br/>
-                 <TextField
-                   type="password"
-                   hintText="Enter your Password"
-                   floatingLabelText="Password"
-                   onChange = {(event,newValue) => this.setState({password:newValue})}
-                   />
-                 <br/>
-                 <button label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
-             </div>
-          </div>
+            <form style={styles.form} onSubmit={this.handleOnSubmit}>
+            <h4>Welcome Back!</h4>
+            <div className='form-group row'>
+              <input className='input' type='text' placeholder='Email'/>
+            </div>
+            <div className='form-group row'>
+              <input className='input' type='password' placeholder='Password'/>
+            </div>
+            <div className='form-group row'>
+              <button className='btn' type='submit'>Log In</button>
+            </div>
+            <div className='form-group row'>
+            </div>
+          </form>
         );
       }
     }
