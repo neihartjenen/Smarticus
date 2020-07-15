@@ -11,7 +11,7 @@ class Register extends Component{
     render() {
         return (
           <form style={styles.form} onSubmit={this.handleOnSubmit}>
-          <h4>Welcome Back!</h4>
+          <h4>Register Now!</h4>
           <div className='form-group row'>
             <input className='input' type='text' placeholder='New User'/>
           </div>
@@ -19,7 +19,7 @@ class Register extends Component{
             <input className='input' type='password' placeholder='Password'/>
           </div>
           <div className='form-group row'>
-            <button className='btn' type='submit'>Register Now</button>
+            <button className='btn' type='submit'>Register</button>
           </div>
           <div className='form-group row'>
           </div>
