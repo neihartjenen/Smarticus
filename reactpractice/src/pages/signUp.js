@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Col, Row, Container} from "../../components/Grid";
 
 
-class Login extends Component{
+class signUp extends Component{
     state={
         username: "",
         password: "",
@@ -13,7 +13,7 @@ class Login extends Component{
         <Container>
           <Row>
             <Col size={"12"}>
-              <h1>Please Login</h1>
+              <h1>Please Sign Up!</h1>
             </Col>
           </Row>
           <div>
@@ -39,4 +39,4 @@ class Login extends Component{
 
 }
 
-export default Login;
+export default signUp;
