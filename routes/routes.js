@@ -7,8 +7,8 @@ function apiRoutes(app){
        })
    })
    app.post("/api/questions", function(req, res){
-       db.Question.create(req.body).then(results => {
-           res.json(results);
+        db.Question.create(req.body).then(results => {
+            res.json(results);
        })
    })
     
