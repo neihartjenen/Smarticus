@@ -6,7 +6,9 @@ import API from "../utils/API";
 class Question extends React.Component{
       state={
         questions:[],
-        count: 0
+        count: 0,
+        score: 0,
+        tempScore: 10
       };
 
       getQuestions(){
@@ -35,14 +37,22 @@ class Question extends React.Component{
 
       changeQuestion = (answer,correct) => {
         if(answer === correct && this.state.count === 4){
-            alert("You win!!!!!")
+            alert("Congrats on finishing, your score is "+ (this.state.score + this.state.tempScore) + "\n Would you like to try again?")
+            this.setState({count: 0, score: 0, tempScore: 10})
             return true;
         } else if(answer === correct){
-            console.log("changing count");
+            // console.log("changing count");
+            let changeScore = this.state.tempScore + this.state.score;
             let temp = this.state.count;
-            this.setState({count: temp + 1})
+            this.setState({count: temp + 1, score: changeScore, tempScore: 10});
             return true;
         } else {
+            let temp = this.state.tempScore;
+            if(this.state.tempScore===1){
+                this.setState({tempScore: temp});
+            }else{
+                this.setState({tempScore: temp-3});
+            }
             return false;
         }
       }
@@ -72,7 +82,7 @@ class Question extends React.Component{
                     {/* {console.log(this.state.questions)} */}
                     {/* {console.log(this.state.questions)} */}
                     {!this.state.questions.length ? (<h1>loading</h1>):(
-                        <Format changeQuestion={this.changeQuestion} sound={this.sound} question={this.order("question")} answers={this.order("answers")} correct={this.order("correct")} hint={this.order("hint")}/>
+                        <Format changeQuestion={this.changeQuestion} sound={this.sound} score={this.state.score} question={this.order("question")} answers={this.order("answers")} correct={this.order("correct")} hint={this.order("hint")}/>
                     )}
                     
             </Container>

@@ -5,15 +5,15 @@ import wrongSfx from '../../Sound/wrong.mp3';
 import rightSfx from '../../Sound/right.mp3';
 
 function Format(props){
-  const [wrong] = useSound(wrongSfx);
-  const [right] = useSound(rightSfx);
+  const [wrong] = useSound(wrongSfx, {volume: 0.5});
+  const [right] = useSound(rightSfx, {volume: 0.5});
   const isTrue = false;
   // console.log("Inside component",props.question);
     return (
         <div>
           <Row>
               <Col size={"12"}>
-                  <p>
+                  <p style={{textAlign: "center", marginBottom:"100px", marginTop:"100px", fontSize:"30px"}}>
                       {props.question}
                   </p>
               </Col>
@@ -23,7 +23,7 @@ function Format(props){
               {props.answers.map(answerSub => 
                 answerSub.map((answer) =>(
                   <Col size={"6"}>
-                    <a className="waves-effect waves-light btn-large" style={{margin:"10px"}} onClick={() => props.changeQuestion(answer, props.correct) ? right() : wrong()}>{answer}</a>
+                    <a className="waves-effect waves-light btn-large" style={{margin:"10px", alignContent:"center"}} onClick={() => props.changeQuestion(answer, props.correct) ? right() : wrong()}>{answer}</a>
                   </Col>
                 ))
               )
@@ -31,8 +31,8 @@ function Format(props){
           </Row>
           <Row>
               <Col size={"10"}>
-                  <p>
-                    {/* Score */}
+                  <p style={{textAlign: "center", marginBottom:"100px", marginTop:"100px", fontSize:"30px"}}>
+                    {props.score}
                   </p>
               </Col>
               <Col size={"2"}>
