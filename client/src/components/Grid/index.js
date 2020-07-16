@@ -7,9 +7,9 @@ export function Row({children}) {
 }
 
 export function Col({size, children}) {
-    var temp = size;
+    var col = "col l"+size;
     return (
-        <div className = {temp}>
+        <div className = {col}>
             {children}
         </div>
     )
