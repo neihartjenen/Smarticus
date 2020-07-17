@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {Container} from "../components/Grid";
 import Format from "../components/Format";
 import API from "../utils/API";

@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import {Container, Col, Row} from "../components/Grid";
 import Smarticus from "../Images/Smarticus_2.png";
 
-class Login extends Component{
+class SignUp extends Component{
     state={
         username: "",
         password: ""
     };
 
-    verification(){
+    signUp(){
         console.log(this.state.username);
         console.log(this.state.password);
     }
@@ -26,10 +26,10 @@ class Login extends Component{
                 <Row>
                     <Col size={"12"}>
                         <Row>
-                            <img alt={"smarticus"} src={Smarticus} style={{float:"center"}}></img>
+                            <img alt={"smarticus"} src={Smarticus}></img>
                         </Row>
                         <Row>
-                            <p style={{color:"white", fontSize:"25px"}}>Login:</p>
+                            <p style={{color:"white", fontSize:"25px"}}>Sign Up:</p>
                             <input value={this.state.username} style={{color:"white"}} onChange={this.handleInputChange} placeholder="Username"></input>
                         </Row>
                         <Row>
@@ -37,12 +37,12 @@ class Login extends Component{
                         </Row>
                         <Row>
                             <button className="btn waves-effect waves-light" type="submit" name="action" >
-                                Login
+                                Submit
                                 <i class="material-icons right">send</i>
                             </button>
                         </Row>
                         <Row>
-                            <a href={"/signup"} style={{float:"right"}}>SignUp</a>
+                            <a href={"/login"} style={{float:"right"}}>Login</a>
                         </Row>
                     </Col>
                 </Row>
@@ -52,4 +52,4 @@ class Login extends Component{
       
 }
       
-export default Login;
+export default SignUp;

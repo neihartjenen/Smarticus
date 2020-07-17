@@ -13,7 +13,7 @@ function Format(props){
         <div>
           <Row>
               <Col size={"12"}>
-                  <p style={{textAlign: "center", marginBottom:"100px", marginTop:"100px", fontSize:"30px"}}>
+                  <p style={{textAlign: "center", marginBottom:"100px", marginTop:"100px", fontSize:"30px", color:"white"}}>
                       {props.question}
                   </p>
               </Col>
@@ -31,7 +31,7 @@ function Format(props){
           </Row>
           <Row>
               <Col size={"10"}>
-                  <p style={{textAlign: "center", marginBottom:"100px", marginTop:"100px", fontSize:"30px"}}>
+                  <p style={{textAlign: "center", marginBottom:"100px", marginTop:"100px", fontSize:"30px", color:"white"}}>
                     {props.score}
                   </p>
               </Col>
